@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.util.Callback;
 
@@ -23,7 +24,7 @@ public class Controller implements Initializable {
 
     DictionaryManagement NewDictionary = new DictionaryManagement();
     ObservableList<Word> newWord = FXCollections.observableArrayList();
-
+    private Word selectedWord;
     @FXML
     private TextField SearchBar;
 
@@ -31,12 +32,16 @@ public class Controller implements Initializable {
     private ListView<Word> listView;
 
     @FXML
-    void search(ActionEvent event) {
-        if (SearchBar.getText().length() > 0) {
-            listView.getItems().clear();
-            //listView.getItems().addAll(searchList(SearchBar.getText(), words));
-        }
-        else listView.getItems().clear();
+    private TextArea contentTextArea;
+
+    public void listViewSelectedWord() {
+        contentTextArea.clear();
+        selectedWord = listView.getSelectionModel().getSelectedItem();
+        updateTextAre();
+    }
+
+    private void updateTextAre() {
+        contentTextArea.setText(selectedWord.getWord_explain());
     }
 
     @Override
@@ -99,12 +104,4 @@ public class Controller implements Initializable {
 
     }
 
-    private List<String> searchList(String searchWord, List<String> ListOfStrings) {
-        List<String> searchWordArray = Arrays.asList(searchWord.trim().split(" "));
-
-        return ListOfStrings.stream().filter(input -> {
-            return searchWordArray.stream().allMatch(word ->
-                    input.toLowerCase().contains(word.toLowerCase()));
-        }).collect(Collectors.toList());
-    }
 }

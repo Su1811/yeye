@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,9 +13,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.Controller">
     <children>
-        <AnchorPane prefHeight="458.0" prefWidth="174.0" style="-fx-background-color: #DA4D5B;">
+        <AnchorPane prefHeight="458.0" prefWidth="165.0" style="-fx-background-color: #DA4D5B;" AnchorPane.bottomAnchor="-0.39999999999997726" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <Pane layoutX="-4.0" prefHeight="46.0" prefWidth="183.0" style="-fx-background-color: #F35D44;">
+                <Pane layoutX="-4.0" prefHeight="46.0" prefWidth="179.0" style="-fx-background-color: #F35D44;">
                     <children>
                         <Label layoutX="14.0" layoutY="6.0" text="MENU" textFill="WHITE">
                             <font>
@@ -23,27 +24,27 @@
                         </Label>
                     </children>
                 </Pane>
-                <JFXButton layoutX="5.0" layoutY="105.0" prefHeight="34.0" prefWidth="146.0" style="-fx-border-color: #fff; -fx-border-radius: 20;" text="Add Word" textFill="WHITE">
+                <JFXButton layoutX="5.0" layoutY="101.0" prefHeight="34.0" prefWidth="146.0" style="-fx-border-color: #fff; -fx-border-radius: 20;" text="Add Word" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="23.80000000000004">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </JFXButton>
-                <JFXButton layoutX="5.0" layoutY="149.0" prefHeight="34.0" prefWidth="146.0" style="-fx-border-color: #fff; -fx-border-radius: 20;" text="Fix Word" textFill="WHITE">
+                <JFXButton layoutX="5.0" layoutY="149.0" prefHeight="34.0" prefWidth="146.0" style="-fx-border-color: #fff; -fx-border-radius: 20;" text="Fix Word" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="24.0">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </JFXButton>
-                <JFXButton layoutX="5.0" layoutY="194.0" prefHeight="18.0" prefWidth="146.0" style="-fx-border-color: #fff; -fx-border-radius: 20;" text="Remove Word" textFill="WHITE">
+                <JFXButton layoutX="5.0" layoutY="194.0" prefHeight="18.0" prefWidth="146.0" style="-fx-border-color: #fff; -fx-border-radius: 20;" text="Remove Word" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="23.80000000000004">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </JFXButton>
-                <JFXButton layoutX="5.0" layoutY="242.0" prefHeight="34.0" prefWidth="146.0" style="-fx-border-color: #fff; -fx-border-radius: 20;" text="Translate Text" textFill="WHITE">
+                <JFXButton layoutX="5.0" layoutY="241.0" prefHeight="34.0" prefWidth="146.0" style="-fx-border-color: #fff; -fx-border-radius: 20;" text="Translate Text" textFill="WHITE" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="23.80000000000004">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </JFXButton>
-                <JFXButton layoutX="14.0" layoutY="409.0" prefHeight="34.0" prefWidth="46.0" style="-fx-border-radius: 20;" text=" " textFill="WHITE">
+                <JFXButton layoutX="14.0" layoutY="409.0" prefHeight="34.0" prefWidth="46.0" style="-fx-border-radius: 20;" text=" " textFill="WHITE" AnchorPane.bottomAnchor="11.799999999999976" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="103.6" AnchorPane.topAnchor="409.0">
                     <font>
                         <Font size="15.0" />
                     </font>
@@ -57,24 +58,29 @@
                 </JFXButton>
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="174.0" layoutY="-7.0" prefHeight="466.0" prefWidth="235.0" style="-fx-background-color: #C93D4B;">
+        <AnchorPane layoutX="174.0" layoutY="-7.0" prefHeight="466.0" prefWidth="235.0" style="-fx-background-color: #C93D4B;" AnchorPane.bottomAnchor="-0.39999999999997726" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="289.8" AnchorPane.topAnchor="0.0">
             <children>
-                <TextField fx:id="SearchBar" alignment="CENTER" layoutX="23.0" layoutY="72.0" onAction="#search" prefHeight="27.0" prefWidth="183.0" promptText="Search" style="-fx-background-color: #C93D4B; -fx-background-insets: 0; -fx-border-color: #fff; -fx-border-radius: 20; -fx-text-fill: white;" />
-                <JFXButton layoutX="169.0" layoutY="70.0" text=" ">
+                <TextField fx:id="SearchBar" alignment="CENTER" layoutX="23.0" layoutY="72.0" prefHeight="27.0" prefWidth="183.0" promptText="Search" style="-fx-background-color: #C93D4B; -fx-background-insets: 0; -fx-border-color: #fff; -fx-border-radius: 20; -fx-text-fill: white;" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="29.0" />
+                <JFXButton layoutX="169.0" layoutY="70.0" text=" " AnchorPane.rightAnchor="19.79999999999999">
                     <graphic>
-                        <ImageView fitHeight="27.0" fitWidth="23.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="27.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../Icon/outline_search_white_24dp.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </JFXButton>
-            <ListView fx:id="listView" layoutX="18.0" layoutY="124.0" prefHeight="329.0" prefWidth="200.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" />
+            <ListView fx:id="listView" layoutX="18.0" layoutY="114.0" onMouseClicked="#listViewSelectedWord" prefHeight="329.0" prefWidth="200.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.19999999999999" />
             </children>
         </AnchorPane>
-        <AnchorPane layoutX="407.0" prefHeight="458.0" prefWidth="293.0" style="-fx-background-color: #fff;">
+        <AnchorPane layoutX="407.0" prefHeight="458.0" prefWidth="293.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="-0.39999999999997726" AnchorPane.rightAnchor="-2.3999999999999773" AnchorPane.topAnchor="0.0">
             <children>
                 <Pane prefHeight="46.0" prefWidth="294.0" style="-fx-background-color: #932152;" />
+            <TextArea fx:id="contentTextArea" layoutX="29.0" layoutY="95.0" prefHeight="338.0" prefWidth="235.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="30.19999999999999" AnchorPane.topAnchor="95.0">
+               <font>
+                  <Font name="MyriadPro-Regular" size="22.0" />
+               </font>
+            </TextArea>
             </children>
         </AnchorPane>
     </children>
