@@ -63,7 +63,8 @@ public class QueryingData {
                 String pronunciation = detail.substring(k,f+1);
                 System.out.print(pronunciation);
             }
-            for(int i = f+1; i<detail.length();i++) {
+            if(detail.charAt(f)=='/') f++;
+            for(int i = f; i<detail.length();i++) {
                 char tmp = detail.charAt(i);
                 if(tmp!='*')
                 System.out.print(detail.charAt(i));
